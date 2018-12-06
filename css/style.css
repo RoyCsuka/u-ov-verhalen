@@ -1,3 +1,10 @@
+/*  TIPS CSS  */
+/*  a[href^="https://"]  Deze selector pakt het begin   */
+/*  a[href$=".pdf"]  Deze selector pakt het einde van een attribute     */
+/*  a[href*="homepage"]  dingen die erin voorkomen  */
+/*  first-of-type pakt het eerste element in een bepaald rijtje     */
+/*  nth-of-type(2n + 1) begin bij de eerste selector doe om de twee bepaalde styling  */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 html {
     padding: 0;
