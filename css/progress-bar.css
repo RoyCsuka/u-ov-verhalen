@@ -1,0 +1,36 @@
+/*
+body {
+    animation: wiggle .5 .75 1;
+    transform-origin: center bottom;
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(-10deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+}
+*/
+
+progress {
+    width: calc(100% + 1.875em);
+    height: 0.35em;
+    background-color: #f2f1f1;
+    margin-left: -0.9375em; 
+}
+
+progress::-webkit-progress-value {
+    background: #fcda00;
+}
+
+progress.fixed {
+    position: fixed;
+    top: 33px;
+    margin-left: -15px;
+    width: 100%;
+}
+
+.verhaal {
+    height: 2500px;
+}

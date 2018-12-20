@@ -1,0 +1,51 @@
+/*   BEGIN TOP BLOK   */
+
+main>div {
+    background: url('../img/U-OV-busstation-bussen.jpg') no-repeat center;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    padding: 1.875em 1em;
+    margin-left: -1em;
+    margin-bottom: 1.5em;
+}
+
+main div section {
+    padding: 1.875em 0.938em 0 0.938em;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1.333em 3em 0 rgba(103, 92, 83, .3);
+    box-shadow: 0 1.333em 3em 0 rgba(103, 92, 83, .3);
+}
+
+section form:nth-of-type(2) input[type=checkbox] {
+    margin-left: -1000em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+section form:nth-of-type(2) span {
+    display: flex;
+    padding: 0.625em;
+    border: 0.16em solid #f1f1f1;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+section form:nth-of-type(2) input[type=checkbox]:checked+span {
+    background-color: #f1f1f1;
+}
+
+section form:nth-of-type(2) label span {
+    margin-right: auto;
+}
+
+section form:nth-of-type(2) span:after {
+    content: "(12)";
+    font-size: 0.7em;
+    margin-left: auto;
+    color: black;
+}
+
+
+/*   EINDE TOP BLOK   */

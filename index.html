@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <title>Utrecht (U-OV) verhalen Overzichtspagina</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/progress-bar.css">
     <meta charset="UTF-8">
+    <meta name="author" content="Roy Csuka">
+    <meta name="studentennummer" content="500780628">
     <meta name="viewport" content="initial-scale=1.0">
     <meta name="description" content="In opdracht van U-OV is dit. Hier staan alle 99 verhalen van Max J. Molovich.">
 </head>
 
 <body>
     <header>
-        <a href="">
+        <a href="index.html">
             <img src="img/logo-uov.svg" alt="Utrecht (U-OV) verhalen" title="Utrecht (U-OV) verhalen">
         </a>
     </header>
 
-    <div>
-        <section>
-            <h1>Vind je boek</h1>
-            <form action="">
-                <label for="zoeken">Vind jouw verhaal!<input type="search" name="zoeken"></label>
-                <div>
-                    <button>Filteropties</button>
-                    <button>Zoek mijn verhaal</button>
-                </div>
-            </form>
-            <form action="">
-                <div>
-                    <h2>Thema</h2>
-                    <label><p>Selecteer</p><input type="checkbox"></label>
-                    <label><p>Duister / somber</p><input type="checkbox"></label>
-                    <label><p>Kinderlijk</p><input type="checkbox"></label>
-                    <label><p>Ouderwets</p><input type="checkbox"></label>
-                    <label><p>Schreewend</p><input type="checkbox"></label>
-                    <label><p>Vrolijk</p><input type="checkbox"></label>
-                    <label><p>Verward</p><input type="checkbox"></label>
-                    <label><p>Humor</p><input type="checkbox"></label>
-                    <label><p>Liefdevol</p><input type="checkbox"></label>
-                </div>
-            </form>
-        </section>
-    </div>
-
     <main>
+        <div>
+            <section>
+                <h1><em>101</em> verhalen voor inspiratie &amp; </h1>
+                <h2>U-OV verhalen</h2>
+                <form action="">
+                    <button>Vind je verhaal met filters</button>
+                </form>
+                <form action="">
+                    <fieldset>
+                        <legend>Thema</legend>
+                        <label><input type="checkbox"><span>Selecteer</span></label>
+                        <label><input type="checkbox"><span>Duister / somber</span></label>
+                        <label><input type="checkbox"><span>Kinderlijk</span></label>
+                        <label><input type="checkbox"><span>Ouderwets</span></label>
+                        <label><input type="checkbox"><span>Schreeuwend</span></label>
+                        <label><input type="checkbox"><span>Vrolijk</span></label>
+                        <label><input type="checkbox"><span>Verward</span></label>
+                        <label><input type="checkbox"><span>Humor</span></label>
+                        <label><input type="checkbox"><span>Liefdevol</span></label>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
         <h2>Verhaal van de dag</h2>
         <article>
-            <a href="">
+            <a href="verhaal-detail.html">
+                <img src="img/doof_eenzaam-verhaal.jpg" alt="Verhaal: Doof. Eenzame sfeer">
+            </a>
+            <h3>Hallo dit is een H3</h3>
+            <footer>
+                <span>Dit is een span</span>
+                <span>13-10-18</span>
+                <span>*****</span>
+                <span>Roy Csuka</span>
+                <span>Perspectief</span>
+                <span>Gemiddeld lang verhaal</span>
+            </footer>
+            <p>Tekstje onder dit mooie blokje. Hier zal iets van twee aan drie regels komen te staan.</p>
+        </article>
+        <article>
+            <a href="verhaal-detail.html">
                 <img src="img/doof_eenzaam-verhaal.jpg" alt="Verhaal: Doof. Eenzame sfeer">
             </a>
             <h3>Hallo dit is een H3</h3>
@@ -60,6 +76,9 @@
             <p>Tekstje onder dit mooie blokje. Hier zal iets van twee aan drie regels komen te staan.</p>
         </article>
     </main>
+    <footer>
+        <p>© 2018 Verhalenwebsite door Roy Csuka</p>
+    </footer>
 </body>
 
 </html>

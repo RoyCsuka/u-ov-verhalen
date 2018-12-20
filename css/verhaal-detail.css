@@ -1,0 +1,63 @@
+main article:first-child > div {
+    background-color: #f7f4f1;
+    width: calc(100% + 1.875em);
+    margin-left: -0.9375em;
+    padding: 0 0.9375em;
+    box-sizing: border-box;
+}
+
+main article:first-child div > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+main article:first-child div > div a {
+    padding: 15px 10px;
+    background-color: white;
+    color: #675c53;
+    text-decoration-line: underline;
+}
+
+main article:first-child div > div a:before {
+    content: '<';
+    margin-right: 10px;
+    display: inline-block;
+}
+
+main article:first-child div > div button {
+    /* styling voor favorieten */
+}
+
+main article:first-child div > h1 {
+    font-size: 1.875em;
+    margin-top: 1.250em;
+}
+
+main article footer, main article footer p {
+    padding: 0;
+}
+
+main article footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main article footer ul li {
+    color: #50a4df;
+    display: inline;
+    border-bottom: 2px solid #50a4df;
+}
+
+main article footer ul li:first-of-type {
+    height: 15px;
+}
+
+main article footer ul li:first-of-type:before {
+    content: '';
+    background-image: url(../img/logo-uov.svg);
+    background-size: cover;
+    width: 10px;
+    height: 13px;
+    display: inline-block;
+    margin-right: 10px;
+}
