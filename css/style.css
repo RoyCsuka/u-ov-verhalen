@@ -31,17 +31,17 @@ p {
     margin: 0;
 }
 
-h1, h2, h3, h4, legend {
+h1, h2, h3, h4, legend, b {
     font-weight: 700;
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 1.375em;
     font-weight: 700;
     margin-bottom: 0.375em;
 }
 
-h2, legend {
+h2 {
     font-size: 1.250em;
     padding-top: 1em;
     padding-bottom: 1.0313em;
@@ -52,6 +52,11 @@ input {
     z-index: 2;
     position: relative;
     background-color: transparent;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
 }
 
 label {
@@ -90,6 +95,7 @@ button {
     color: white;
     border: none;
     display: inline;
+    font-size: 1em;
 }
 
 /*   EINDE ALGEMEEN   */
@@ -100,28 +106,29 @@ button {
 
 header {
     width: 100%;
-    height: 2.500em;
-    position: fixed;
-    background-color: white;
-    margin-left: -15px;
+    height: 2.5em;
     top: 0;
-}
-
-header img {
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 0.375em 0;
+    margin-left: -15px;
+    padding: 0 1em;
+    position: fixed;   
+    display: inline-flex;
+    justify-content: flex-end;
+    background-color: white;
     box-sizing: border-box;
 }
 
-header a:nth-child(2):before {
-    content: '';
-    display: inline-block;
-    background-image: url('../img/icons/mijn-u-ov.svg');
-    width: 16px;
-    height: 19px;
+header a:first-of-type {
+    margin: 0 auto;
+}
+
+header a:nth-of-type(2) {
+    margin-right: 1em;
+}
+
+header img {
+    height: 100%;
+    padding: 0.375em 0;
+    box-sizing: border-box;
 }
 
 /*   EINDE HEADER   */
@@ -129,11 +136,6 @@ header a:nth-child(2):before {
 
 
 /*   BEGIN FORMULIER   */
-
-/* Dit is het formulier voor de filteropties. Deze staat nu uit voor styling */
-/*body div section form:nth-child(3) {
-   display: none;
-}*/
 
 section form:nth-child(3) p, body div section form:nth-child(3) input {
     display: inline-flex;
@@ -146,7 +148,101 @@ section form:nth-child(3) input {
 }
 
 legend {
-    padding-left: 0;
+    padding: 20px 0 0 0;
+}
+
+div section form:first-of-type {
+    position: absolute;
+    background-color: white;
+    width: 100vw;
+    height: auto;
+    margin-left: -1.8em;
+    top: 0;
+    display: none;
+}
+
+/*  Alles wat hieronder uitgecomment is moet weer actief zijn als er op de button filteren geklikt wordt  */
+
+div section form:nth-of-type(2) div {
+    display: inline-flex;
+    flex-wrap: wrap;
+/*    width: 100%;*/
+    width: calc(100% + 2em);
+    margin-left: -1em;
+    padding: 1em;
+    left: 0;
+    border-radius: 0 0 0.625em 0.625em;
+/*    padding: 1.8em;*/
+    box-sizing: border-box;
+    background-color: #f7f4f1;
+/*    position: fixed;*/
+    bottom: 0;
+}
+
+div section form:nth-of-type(2) div p {
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 0.2em;
+}
+
+div section form:nth-of-type(2) div label:first-of-type {
+    margin-left: 1em;
+}
+
+div section form:nth-of-type(2) div label:first-of-type, div section form:nth-of-type(2) div label:nth-of-type(2) {
+    padding-right: 1em;
+}
+
+div section form:nth-of-type(2) div label {
+    border-bottom: 0.1em solid #685c53;
+}
+
+div section form:nth-of-type(2) div label input[type="radio"]:checked + span {
+    color: #e7772b;
+    position: relative;
+}
+
+div section form:nth-of-type(2) div label input[type="radio"]:checked + span::after {
+    content: "";
+    width: 100%;
+    height: 0.2em;
+    background-color: #e7772b;
+    display: block;
+    position: absolute;
+    bottom: -0.7em;
+}
+
+div section form:nth-of-type(2) div span {
+    font-weight: lighter;
+    color: #685c53;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+input[name*="sorteren"] {
+    margin-left: -1000em;
+    height: 0;
+}
+
+div section form:nth-of-type(2) div a {
+    margin-left: auto;
+    width: 1em;
+    margin-top: 0;
+    padding-bottom: 0.3em;
+    border-bottom: 0.15em solid #685c53;
+}
+
+div section form:nth-of-type(2) div a img {
+    width: 100%;
+}
+
+div section form:nth-of-type(2) div button {
+    display: none;
+/*    display: block;*/
+    margin: 2em auto 0 auto;
+    background-color: #d6cec5;
 }
 
 /*   EINDE FORMULIER HOME   */
@@ -168,7 +264,7 @@ article {
 
 article img {
     border-radius: 0.667em 0.667em 0 0;
-    height: 7.313em;
+    height: 13.5em;
     object-fit: cover;
     width: 100%;
 }
