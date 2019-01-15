@@ -4,7 +4,7 @@ main>div {
     background: url('../img/U-OV-busstation-bussen.jpg') no-repeat center;
     background-size: cover;
     height: auto;
-    width: 100%;
+    width: calc(100% + 1em);
     padding: 1.875em 1em 1.875em 0;
     margin-left: -1em;
     margin-bottom: 1.5em;
@@ -13,7 +13,7 @@ main>div {
 main div section {
     padding: 1.875em 0.938em 0 0.938em;
     background-color: white;
-    border-radius: 0.625em;
+    border-radius: 0 0.625em 0.625em 0;
     -webkit-box-shadow: 0 1.333em 3em 0 rgba(103, 92, 83, .3);
     box-shadow: 0 1.333em 3em 0 rgba(103, 92, 83, .3);
 }
@@ -26,13 +26,16 @@ h1 {
 
 main section:first-of-type h2 {
     padding-top: 0;
-    font-size: 1.375em;
 }
 
 section form input[type=checkbox] {
     margin-left: -1000em;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+section form input[type=checkbox]:focus + section form span {
+    border-color: #e7772b;
 }
 
 section form span {
@@ -83,5 +86,165 @@ section form input[type=checkbox] + span::after {
     margin-top: 0.2em;
 }
 
+/*   Filters overlay  */
+
+div section form:first-of-type button::before {
+    content: "";
+    display: inherit;
+    height: 1em;
+    width: 0.5em;
+    background-image: url(../img/icons/pijl-terug.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+div section form:first-of-type button {
+    background-color: transparent;
+    color: #675c53;
+    border-radius: 0;
+}
+
+div section form:first-of-type.toon-filters {
+    display: inherit;
+    z-index: 999999;
+}
+
+div section form:first-of-type {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin-left: -1em;
+    padding: 0 1em 100em 1em;
+    box-sizing: border-box;
+    top: 0;
+    display: none;
+}
+
 
 /*   EINDE TOP BLOK   */
+
+
+/*   VERHAAL V/D DAG   */
+
+main article:first-of-type img {
+    border-radius: 0.66em 0.66em 0 0.66em;
+    width: calc(100% - 1em);
+    margin-left: -1em;
+    -webkit-box-shadow: 0 -0.1em 1.13em 0 rgba(103,92,83,.3);
+    -moz-box-shadow: 0 -0.1em 1.13em 0 rgba(103,92,83,.3);
+    box-shadow: 0 -0.1em 1.13em 0 rgba(103,92,83,.3);
+    margin-top: -1.25em;
+}
+
+main article:first-of-type::before {
+    content: "";
+    display: inherit;
+    z-index: -1;
+    height: 7.25em;
+    background-color: #f0f0f0;
+    margin-top: -6em;
+    width: 200vw;
+    margin-left: -100vw;
+}
+
+main article:first-of-type {
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    padding-left: 1em;
+    box-sizing: border-box;
+}
+
+main article:first-of-type div {
+    background-color: #ffffff;
+    margin-top: -0.25em;
+    padding: 0 1em;
+    box-sizing: border-box;
+    border-radius: 0 0.66em 0.66em 0.66em;
+    -webkit-box-shadow: 0 0.5em 1.13em 0 rgba(103,92,83,.3);
+    -moz-box-shadow: 0 0.5em 1.13em 0 rgba(103,92,83,.3);
+    box-shadow: 0 0.5em 1.13em 0 rgba(103,92,83,.3);
+}
+
+/*   Verhalen    */
+
+
+article {
+    border-radius: 0.667em;
+    -webkit-box-shadow: 0 0.5em 1.13em 0 rgba(103,92,83,.3);
+    -moz-box-shadow: 0 0.5em 1.13em 0 rgba(103,92,83,.3);
+    box-shadow: 0 0.5em 1.13em 0 rgba(103,92,83,.3);
+    padding: 0 1.25em;
+    margin-bottom: 1.875em;
+    max-width: 37.5em;
+    margin: 0 auto 1.875em auto;
+}
+
+article a {
+    text-decoration: none;
+}
+
+article img {
+    border-radius: 0.667em 0.667em 0 0;
+    height: 100%;
+    max-height: 20em;
+    object-fit: cover;
+    object-position: top;
+    width: calc(100% + 2.5em);
+    margin-left: -1.25em;
+}
+
+article h3 {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    padding: 0.9em 0 0;
+    color: #000000;
+}
+
+article p {
+    padding: 1.250em;
+}
+
+article footer span {
+    color: #675c53;
+    width: 100%;
+    display: inline-block;
+    font-weight: lighter;
+}
+
+article footer {
+    padding: 0.3em 0 1.5em 0;
+}
+
+article footer p {
+    display: inline-block;
+    border-bottom: 0.13em solid #50a3de;
+    color: #50a3de;
+    text-align: right;
+    padding: 1em 0 0 0;
+}
+
+article footer p:first-of-type::before {
+    background-image: url(../img/icons/likes.svg);
+    width: 1em;
+}
+
+article footer p:nth-of-type(2)::before {
+    background-image: url(../img/icons/weergave.svg);
+    width: 1.5em;
+}
+
+article footer p:nth-of-type(2) {
+    margin-left: 0.5em;
+}
+
+article footer p:first-of-type::before, article footer p:nth-of-type(2)::before  {
+    content: "";
+    display: inline-block;
+    height: 1em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 0.63em;
+}

@@ -26,11 +26,7 @@ progress::-webkit-progress-value {
 
 progress.fixed {
     position: fixed;
-    top: 33px;
-    margin-left: -15px;
-    width: 100%;
-}
-
-.verhaal {
-    height: 2500px;
+    top: 2.5em;
+    margin-left: -2em;
+    width: calc(100% + 1em);
 }

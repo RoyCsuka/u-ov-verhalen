@@ -16,11 +16,14 @@ html {
 body,
 html {
     margin: 0;
+    font-size: 1em;
 }
 
 body {
-    padding: 0 0.938em;
+    padding: 0 1em;
     font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f8;
+    overflow-x: hidden;
 }
 
 h1,
@@ -36,15 +39,19 @@ h1, h2, h3, h4, legend, b {
 }
 
 h1 {
-    font-size: 1.375em;
+    font-size: 1.6em;
     font-weight: 700;
     margin-bottom: 0.375em;
 }
 
 h2 {
-    font-size: 1.250em;
+    font-size: 1.4em;
     padding-top: 1em;
     padding-bottom: 1.0313em;
+}
+
+h3 {
+    font-size: 1.3em;
 }
 
 input {
@@ -67,7 +74,7 @@ label {
 }
 
 input, button, p {
-    font-size: 0.875em;
+    font-size: 1em;
 }
 
 button:focus, button:active, button:visited {
@@ -90,7 +97,7 @@ section form div button:nth-of-type(2) {
 
 button {
     background-color: #e7772b;
-    padding: 0.563em 0.938em;
+    padding: 0.63em 1em;
     border-radius: 0.5em;
     color: white;
     border: none;
@@ -115,6 +122,7 @@ header {
     justify-content: flex-end;
     background-color: white;
     box-sizing: border-box;
+    z-index: 3;
 }
 
 header a:first-of-type {
@@ -151,14 +159,8 @@ legend {
     padding: 20px 0 0 0;
 }
 
-div section form:first-of-type {
-    position: absolute;
-    background-color: white;
-    width: 100vw;
-    height: auto;
-    margin-left: -1.8em;
-    top: 0;
-    display: none;
+div section form:nth-of-type(2) {
+    margin-top: 1em;
 }
 
 /*  Alles wat hieronder uitgecomment is moet weer actief zijn als er op de button filteren geklikt wordt  */
@@ -171,7 +173,7 @@ div section form:nth-of-type(2) div {
     margin-left: -1em;
     padding: 1em;
     left: 0;
-    border-radius: 0 0 0.625em 0.625em;
+    border-radius: 0 0 0.625em 0;
 /*    padding: 1.8em;*/
     box-sizing: border-box;
     background-color: #f7f4f1;
@@ -209,7 +211,7 @@ div section form:nth-of-type(2) div label input[type="radio"]:checked + span::af
     background-color: #e7772b;
     display: block;
     position: absolute;
-    bottom: -0.7em;
+    bottom: -0.3em;
 }
 
 div section form:nth-of-type(2) div span {
@@ -226,21 +228,26 @@ input[name*="sorteren"] {
     height: 0;
 }
 
-div section form:nth-of-type(2) div a {
+div section form:nth-of-type(2) div button[value="volgorde"] {
     margin-left: auto;
     width: 1em;
     margin-top: 0;
     padding-bottom: 0.3em;
     border-bottom: 0.15em solid #685c53;
+    background-color: transparent;
+    display: block;
+    color: black;
+    padding: 0;
+    border-radius: 0;
 }
 
-div section form:nth-of-type(2) div a img {
+div section form:nth-of-type(2) div button[value="volgorde"] img {
     width: 100%;
 }
 
-div section form:nth-of-type(2) div button {
+div section form:nth-of-type(2) div button[value="filteren"] {
     display: none;
-/*    display: block;*/
+/*    display:  ;*/
     margin: 2em auto 0 auto;
     background-color: #d6cec5;
 }
@@ -250,38 +257,113 @@ div section form:nth-of-type(2) div button {
 
 
 
-/*   BEGIN MAIN CONTENT HOME   */
+/*   Main content en verhalen / articles   */
 
 body main {
     margin: 2.500em 0 1.5em 0;
 }
 
-article {
-    border-radius: 0.667em;
-    -webkit-box-shadow: 0 1.333em 3em 0 rgba(103,92,83,.3);
-    box-shadow: 0 1.333em 3em 0 rgba(103,92,83,.3);
+/*   EINDE MAIN CONTENT   */
+
+/*   Onderkant pagina en Footer   */
+
+aside:before {
+    content: "";
+    display: inherit;
+    width: calc(100% + 2em);
+    margin-left: -1em;
+    height: 1.25em;
+    background-color: #f9f9f8;
+    z-index: 1;
+    
 }
 
-article img {
-    border-radius: 0.667em 0.667em 0 0;
-    height: 13.5em;
-    object-fit: cover;
-    width: 100%;
+aside {
+    background-color: #f0f0f0;
+    width: calc(100% + 2em);
+    margin-left: -1em;
+    padding: 0 1em 2.5em 1em;
+    box-sizing: border-box;
+    margin-top: 4.375em;
 }
 
-footer p {
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
+aside section {
+    background-color: #ffffff;
+    padding: 0.5em 1.25em 1.5em;
+    box-sizing: border-box;
+    border-radius: 0.63em;
+    margin-top: -1em;
+    z-index: 2;
+    -webkit-box-shadow: 0 0.5em 1.13em 0 rgba(103,92,83,.3);
+    -moz-box-shadow: 0 0.5em 1.13em 0 rgba(103,92,83,.3);
+    box-shadow: 0 0.5em 1.13em 0 rgba(103,92,83,.3);
+}
+
+aside h3 {
+    margin-bottom: 1em;
+    margin-top: 1.56em;
+    font-size: 1.2em;
+}
+
+aside p:first-of-type::before {
+    content: "";
+    width: 1.4em;
+    height: 1.4em;
+    background-image: url(../img/icons/contact-telefoon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inherit;
+    margin-left: -10%;
+    margin-right: calc(10% - 1.4em);
+}
+
+aside p:first-of-type {
+    padding-bottom: 0.35em;
+}
+
+aside p:nth-of-type(2) {
     color: #675c53;
+    line-height: 1.3em;
+    font-weight: 400;
 }
 
-article h3, article footer {
-    padding: 0 1em;
+aside p {
+    display: inline-block;
+    width: 90%;
+    padding-left: 10%;
+}
+
+aside img {
+    display: inline-block;
+}
+
+body > footer {
+    background-color: #ffffff;
+    width: calc(100% + 2em);
+    margin-left: -1em;
+    padding: 0 1em 2.2em;
     box-sizing: border-box;
 }
 
-article p {
-    padding: 1.250em;
+body > footer section div {
+    display: flex;
+    padding: 2.5em 0 1.25em;
 }
 
-/*   EINDE MAIN CONTENT   */
+body > footer section div img:nth-of-type(2), body > footer section div img:nth-of-type(3),  {
+    width: 30px;
+    height: 30px;
+}
+
+body > footer section div img:nth-of-type(2) {
+    margin-left: auto;
+    margin-right: 0.63em;
+}
+
+body > footer section a {
+    color: #afa9a2;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    line-height: 2em;
+}

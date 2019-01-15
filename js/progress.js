@@ -1,12 +1,3 @@
-//var zoekbutton = document.querySelector('img');
-//var zoekveld = document.querySelector('header');
-//
-//zoekbutton.addEventListener('click', function(){
-//    zoekveld.classList.toggle('show-search') /*zet class erbij of haalt er weg*/
-//    zoekveld.classList.add('show-search') /*zet class erbij*/
-//    zoekveld.classList.remove('show-search') /*haalt class weg*/
-//})
-
 var gegevens = document.getElementById('indicatie');
 var progressBar = document.querySelector('progress');
 
@@ -18,10 +9,10 @@ function progressie() {
     var hoogteDocOfBody = document.body.scrollTop || document.documentElement.scrollTop;
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (hoogteDocOfBody / height) * 100;
-    if (scrolled > 10) {
+    if (scrolled > 2.5) {
         progressBar.classList.add('fixed');
     }
-    if (scrolled < 10) {
+    else if (scrolled < 2.5) {
         progressBar.classList.remove('fixed');
     }
     else if (scrolled > 0 && scrolled < 25) {

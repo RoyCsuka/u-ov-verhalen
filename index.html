@@ -31,9 +31,9 @@
             <section>
                 <h1><b>101</b> verhalen voor inspiratie &amp; vermaak</h1>
                 <h2>U-OV verhalen</h2>
-                <button>Vind je verhaal met filters</button>
+                <button>Vind je verhaal met filteren</button>
                 <form action="">
-                    <a href="">terug</a>
+                    <button>terug</button>
                     <fieldset>
                         <legend>Wat voor verhaal zoek je?</legend>
                         <label><input type="checkbox"><span>Apart</span></label>
@@ -51,6 +51,14 @@
                         <label><input type="checkbox"><span>Poëtisch</span></label>
                         <label><input type="checkbox"><span>Vergezocht</span></label>
                         <label><input type="checkbox"><span>Weinig woorden</span></label>
+                        <div>
+                            <p>Sorteer op</p>
+                            <label><input type="radio" name="sorteren" value="auteur"><span>Auteur</span></label>
+                            <label><input type="radio" name="sorteren" value="datum"><span>Datum</span></label>
+                            <label><input type="radio" name="sorteren" value="populariteit"><span>Populariteit</span></label>
+                            <button value="volgorde"><img src="./img/icons/sort-a-z.svg" alt=""></button>
+                            <button value="filteren">Keuzes filteren</button>
+                        </div>
                     </fieldset>
                 </form>
                 <form action="">
@@ -60,8 +68,8 @@
                             <label><input type="radio" name="sorteren" value="auteur"><span>Auteur</span></label>
                             <label><input type="radio" name="sorteren" value="datum"><span>Datum</span></label>
                             <label><input type="radio" name="sorteren" value="populariteit"><span>Populariteit</span></label>
-                            <a href=""><img src="./img/icons/sort-a-z.svg" alt=""></a>
-                            <button>Keuzes filteren</button>
+                            <button value="volgorde"><img src="./img/icons/sort-a-z.svg" alt=""></button>
+                            <button value="filteren">Keuzes filteren</button>
                         </div>
                     </fieldset>
                 </form>
@@ -70,34 +78,64 @@
         <h2>Verhaal van de dag</h2>
         <article>
             <a href="verhaal-detail.html">
-                <img src="img/verhalen/Alzheimer-Poster-V2.jpg" alt="Verhaal: Doof. Eenzame sfeer">
+                <img src="img/verhalen/doof_eenzaam-verhaal-Roy-Csuka.jpg" alt="Verhaal van de dag: Doof. Eenzame sfeer">
+                <div>
+                    <h3>Doof</h3>
+                    <footer>
+                        <span>Roy Csuka</span>
+                        <p>5</p>
+                        <p>10</p>
+                    </footer>
+                </div>
             </a>
-            <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h3>
-            <footer>
-                <span>Daniel Ros</span>
-                <svg></svg>
-                <p>10</p>
-                <svg></svg>
-                <p>8</p>
-            </footer>
+        </article>
+        <h2>Meest gelezen verhalen</h2>
+        <article>
+            <a href="verhaal-detail.html">
+                <img src="img/verhalen/Alzheimer-Poster-V2.jpg" alt="Verhaal: Doof. Eenzame sfeer">
+                <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h3>
+                <footer>
+                    <span>Daniel Ros</span>
+                    <p>10</p>
+                    <p>8</p>
+                </footer>
+            </a>
         </article>
         <article>
             <a href="verhaal-detail.html">
                 <img src="img/verhalen/Doof_eenzaam-verhaal-Roy-Csuka.jpg" alt="Verhaal: Doof. Eenzame sfeer">
+                <h3>Doof</h3>
+                <footer>
+                    <span>Roy Csuka</span>
+                    <p>10</p>
+                    <p>8</p>
+                </footer>
             </a>
-            <h3>Doof</h3>
-            <footer>
-                <span>Roy Csuka</span>
-                <svg></svg>
-                <p>10</p>
-                <svg></svg>
-                <p>8</p>
-            </footer>
         </article>
     </main>
+    <aside>
+        <section>
+            <h2>Zoek je meer verhalen?</h2>
+            <button>Vind je verhaal met filteren</button>
+        </section>
+        <h3>Neem contact op</h3>
+        <p><b>0900 - 525 2241</b></p>
+        <p>Openingstijden: maandag t/m vrijdag 8:00 uur tot 20:00 uur. Voor dit informatienummer betaal je je gebruikelijke belkosten. </p>
+    </aside>
     <footer>
-        <p>© 2018 Verhalenwebsite door Roy Csuka</p>
+        <section>
+            <div>
+                <img src="img/logo-uov.svg" alt="logo">
+                <img src="img/icons/facebook-logo.svg" alt="U-OV Facebook">
+                <img src="img/icons/twitter-logo.svg" alt="U-OV Twitter">
+            </div>
+            <a href="#">Voorwaarden</a>
+            <a href="#">Disclaimer &amp; Privacy</a>
+            <a href="#">Cookies</a>
+        </section>
     </footer>
+    <script type="text/javascript" src="js/sorteren-az.js"></script>
+    <script type="text/javascript" src="js/open-filters.js"></script>
 </body>
 
 </html>
