@@ -15,15 +15,23 @@
 
 <body>
     <header>
-        <a href="index.html">
-            <img src="img/logo-uov.svg" alt="Utrecht (U-OV) verhalen" title="Utrecht (U-OV) verhalen">
-        </a>
-        <a href="mijn-u-ov-verhalen/inloggen.html">
-            <img src="img/icons/mijn-verhalen.svg" alt="Account en login" title="Account en login">
-        </a>
-        <a href="mijn-u-ov-verhalen/inloggen.html">
-            <img src="img/icons/mijn-u-ov.svg" alt="Account en login" title="Account en login">
-        </a>
+        <ul>
+            <li>
+                <a href="index.html">
+                    <img src="img/logo-uov.svg" alt="Utrecht (U-OV) verhalen" title="Utrecht (U-OV) verhalen">
+                </a>
+            </li>
+            <li>
+                <a href="mijn-u-ov-verhalen/inloggen.html">
+                    <img src="img/icons/mijn-verhalen.svg" alt="Account en login" title="Account en login">
+                </a>
+            </li>
+            <li>
+                <a href="mijn-u-ov-verhalen/inloggen.html">
+                    <img src="img/icons/mijn-u-ov.svg" alt="Account en login" title="Account en login">
+                </a>
+            </li>
+        </ul>
     </header>
 
     <main>
@@ -32,9 +40,15 @@
                 <h1><b>101</b> verhalen voor inspiratie &amp; vermaak</h1>
                 <h2>U-OV verhalen</h2>
                 <button>Vind je verhaal met filteren</button>
-                <form action="">
+                <form onsubmit="return false">
                     <button>terug</button>
                     <fieldset>
+                        <button value="volgorde"><img src="./img/icons/sort-a-z.svg" alt=""></button>
+                        <button value="filteren">Keuzes filteren</button>
+                        <legend>Hoe lang wil je over dit verhaal doen?</legend>
+                        <label><input type="radio" name="sorteren" value="kort"><span>Moet zo overstappen (kort)</span></label>
+                        <label><input type="radio" name="sorteren" value="gemiddeld"><span>Onder de 2:30 minuten</span></label>
+                        <label><input type="radio" name="sorteren" value="lang"><span>Ik heb alle tijd</span></label>
                         <legend>Wat voor verhaal zoek je?</legend>
                         <label><input type="checkbox"><span>Apart</span></label>
                         <label><input type="checkbox"><span>Chaotisch</span></label>
@@ -61,7 +75,7 @@
                         </div>
                     </fieldset>
                 </form>
-                <form action="">
+                <form onsubmit="return false">
                     <fieldset>
                         <div>
                             <p>Sorteer op</p>
@@ -75,52 +89,211 @@
                 </form>
             </section>
         </div>
-        <h2>Verhaal van de dag</h2>
-        <article>
-            <a href="verhaal-detail.html">
-                <img src="img/verhalen/doof_eenzaam-verhaal-Roy-Csuka.jpg" alt="Verhaal van de dag: Doof. Eenzame sfeer">
-                <div>
-                    <h3>Doof</h3>
-                    <footer>
-                        <span>Roy Csuka</span>
-                        <p>5</p>
-                        <p>10</p>
-                    </footer>
-                </div>
-            </a>
-        </article>
-        <h2>Meest gelezen verhalen</h2>
-        <article>
-            <a href="verhaal-detail.html">
-                <img src="img/verhalen/Alzheimer-Poster-V2.jpg" alt="Verhaal: Doof. Eenzame sfeer">
-                <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h3>
-                <footer>
-                    <span>Daniel Ros</span>
-                    <p>10</p>
-                    <p>8</p>
-                </footer>
-            </a>
-        </article>
-        <article>
-            <a href="verhaal-detail.html">
-                <img src="img/verhalen/Doof_eenzaam-verhaal-Roy-Csuka.jpg" alt="Verhaal: Doof. Eenzame sfeer">
-                <h3>Doof</h3>
-                <footer>
-                    <span>Roy Csuka</span>
-                    <p>10</p>
-                    <p>8</p>
-                </footer>
-            </a>
-        </article>
+        <section>
+            <h2>Verhaal van de dag</h2>
+            <article>
+                <a href="verhaal-detail.html">
+                    <img src="img/verhalen/doof_eenzaam-verhaal-Roy-Csuka.png" alt="Verhaal van de dag: Doof. Eenzame sfeer">
+                    <div>
+                        <h3>Doof</h3>
+                        <footer>
+                            <span>Roy Csuka</span>
+                            <div>
+                                <span>30 januari 2019</span>
+                                <span>1:30</span>
+                            </div>
+                            <div>
+                                <span>5</span>
+                                <span>8</span>
+                                <button></button>
+                                <button></button>
+                            </div>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+        </section>
+        <section>
+            <h2>Meest gelezen verhalen</h2>
+            <div>
+                <article>
+                    <a href="verhaal-detail.html">
+                        <img src="img/verhalen/Alzheimer-Poster-V2.jpg" alt="Verhaal: Doof. Eenzame sfeer">
+                        <div>
+                            <h3>Alzheimer</h3>
+                            <footer>
+                                <span>Daniel Ros</span>
+                                <div>
+                                    <span>20 december 2018</span>
+                                    <span>0:30</span>
+                                </div>
+                                <div>
+                                    <span>2</span>
+                                    <span>9</span>
+                                    <button></button>
+                                    <button></button>
+                                </div>
+                            </footer>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="verhaal-detail.html">
+                        <img src="img/verhalen/Verhaal_Marilyn_Doornoink.jpg" alt="Charlie Sheen van Marilyn Doornoink">
+                        <div>
+                            <h3>Charlie Sheen</h3>
+                            <footer>
+                                <span>Marilyn Doornoink</span>
+                                <div>
+                                    <span>30 januari 2019</span>
+                                    <span>1:30</span>
+                                </div>
+                                <div>
+                                    <span>5</span>
+                                    <span>8</span>
+                                    <button></button>
+                                    <button></button>
+                                </div>
+                            </footer>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="verhaal-detail.html">
+                        <img src="img/verhalen/Verhaal-martin%20bril-esmee%20janssen-web%20213.jpg" alt="Verhaal: Doof. Eenzame sfeer">
+                        <div>
+                            <h3>Martin Bril</h3>
+                            <footer>
+                                <span>Esmee Janssen</span>
+                                <div>
+                                    <span>30 januari 2019</span>
+                                    <span>1:30</span>
+                                </div>
+                                <div>
+                                    <span>5</span>
+                                    <span>8</span>
+                                    <button></button>
+                                    <button></button>
+                                </div>
+                            </footer>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <ul>
+                <li><button></button></li>
+                <li><button></button></li>
+                <li><button></button></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Laatste verhaal van deze maand</h2>
+            <article>
+                <a href="verhaal-detail.html">
+                    <img src="img/verhalen/rosakoopman-ericlucassen.jpg" alt="Laatste verhaal van deze maand">
+                    <div>
+                        <h3>Eric Lucassen</h3>
+                        <footer>
+                            <span>Rosa Koopman</span>
+                            <div>
+                                <span>30 januari 2019</span>
+                                <span>1:30</span>
+                            </div>
+                            <div>
+                                <span>5</span>
+                                <span>8</span>
+                                <button></button>
+                                <button></button>
+                            </div>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+        </section>
+        <section>
+            <h2>Meest gelezen verhalen</h2>
+            <div>
+                <article>
+                    <a href="verhaal-detail.html">
+                        <img src="img/verhalen/Lepra_YorickdeWit.jpg" alt="Verhaal: Doof. Eenzame sfeer">
+                        <div>
+                            <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'de kids'</h3>
+                            <footer>
+                                <span>Yorick de Wit</span>
+                                <div>
+                                    <span>30 januari 2019</span>
+                                    <span>1:30</span>
+                                </div>
+                                <div>
+                                    <span>5</span>
+                                    <span>8</span>
+                                    <button></button>
+                                    <button></button>
+                                </div>
+                            </footer>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="verhaal-detail.html">
+                        <img src="img/verhalen/Verhaal-martin%20bril-esmee%20janssen-web%20213.jpg" alt="Verhaal: Doof. Eenzame sfeer">
+                        <div>
+                            <h3>Martin Bril</h3>
+                            <footer>
+                                <span>Esmee Janssen</span>
+                                <div>
+                                    <span>30 januari 2019</span>
+                                    <span>1:30</span>
+                                </div>
+                                <div>
+                                    <span>5</span>
+                                    <span>8</span>
+                                    <button></button>
+                                    <button></button>
+                                </div>
+                            </footer>
+                        </div>
+                    </a>
+                </article>
+                <article>
+                    <a href="verhaal-detail.html">
+                        <img src="img/verhalen/Verhaal-martin%20bril-esmee%20janssen-web%20213.jpg" alt="Verhaal: Doof. Eenzame sfeer">
+                        <div>
+                            <h3>Martin Bril</h3>
+                            <footer>
+                                <span>Esmee Janssen</span>
+                                <div>
+                                    <span>30 januari 2019</span>
+                                    <span>1:30</span>
+                                </div>
+                                <div>
+                                    <span>5</span>
+                                    <span>8</span>
+                                    <button></button>
+                                    <button></button>
+                                </div>
+                            </footer>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <ul>
+                <li><button></button></li>
+                <li><button></button></li>
+                <li><button></button></li>
+            </ul>
+        </section>
     </main>
     <aside>
         <section>
             <h2>Zoek je meer verhalen?</h2>
             <button>Vind je verhaal met filteren</button>
         </section>
-        <h3>Neem contact op</h3>
-        <p><b>0900 - 525 2241</b></p>
-        <p>Openingstijden: maandag t/m vrijdag 8:00 uur tot 20:00 uur. Voor dit informatienummer betaal je je gebruikelijke belkosten. </p>
+        <section>
+            <h3>Neem contact op</h3>
+            <p><b>0900 - 525 2241</b></p>
+            <p>Openingstijden: maandag t/m vrijdag 8:00 uur tot 20:00 uur. Voor dit informatienummer betaal je je gebruikelijke belkosten. </p>
+        </section>
     </aside>
     <footer>
         <section>
