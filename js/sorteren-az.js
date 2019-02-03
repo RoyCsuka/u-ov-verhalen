@@ -1,6 +1,6 @@
-var knop = document.querySelector('button[value="volgorde"]');
-var plaatjeSource = document.querySelector('button[value="volgorde"] img');
+var sorteerKnop = document.querySelector('body div section form:nth-of-type(2) button[value="volgorde"]');
+var sorterenClass = document.querySelector('body div section form:nth-of-type(2) div');
 
-knop.addEventListener('click', function(){
-    plaatjeSource.src="./img/icons/sort-z-a.svg";
+sorteerKnop.addEventListener('click', function(){
+    sorterenClass.classList.toggle('sorteren-a-z')
 })
